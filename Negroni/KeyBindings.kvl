@@ -1,0 +1,27 @@
+#
+# To see the list of available keys look at Core/Key.h file
+#
+
+#---------------------------------------
+# Controls
+#---------------------------------------
+
+MoveForward         W
+MoveBackward        S
+MoveLeft            A
+MoveRight           D
+ReverseRotation     R
+Jump                Space
+
+#---------------------------------------
+# UI
+#---------------------------------------
+
+ToggleDemoUI    Tilde
+Quit            Escape
+
+#---------------------------------------
+# Editor
+#---------------------------------------
+
+PickObject    MouseLeft

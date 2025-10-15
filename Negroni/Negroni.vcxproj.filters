@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX">
+      <UniqueIdentifier>{D86A6D73-444A-EC0E-4D62-77E5B9C05270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{C0FF640D-2C14-8DBE-F595-301E616989EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Vendor">
+      <UniqueIdentifier>{FD493E4B-E9AC-CDEF-9232-06A67E749972}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Vendor\backends">
+      <UniqueIdentifier>{C75067C0-33BD-22BB-FCB0-BA1868DC4423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{5032B729-BC11-36C5-C529-C19B31889C26}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Base.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Clock.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Gui.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Logger.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Queue.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Renderer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Timer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Window.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\D3D11Renderer.h">
+      <Filter>DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\LmdImGui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\ImGuiDX11Renderer.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\ImGuiDemo.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\ImGuiWin32Platform.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Win32Window.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="precompiled.h" />
+    <ClInclude Include="Core\Keyboard.h" />
+    <ClInclude Include="Core\Thread.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Core\SwapChain.h" />
+    <ClInclude Include="Core\RenderThread.h" />
+    <ClInclude Include="Core\GameThread.h" />
+    <ClInclude Include="Core\Array.h" />
+    <ClInclude Include="Core\KeyValueFile.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Lemonade.h" />
+    <ClInclude Include="PlayerScript.h" />
+    <ClInclude Include="Core\Physics.h" />
+    <ClInclude Include="ImGui\ImGuiObjectEditor.h" />
+    <ClInclude Include="Core\CubeMesh.h" />
+    <ClInclude Include="Core\ID.h" />
+    <ClInclude Include="Assimp\AssimpMeshLoader.h" />
+    <ClInclude Include="DirectX\Frustum.h" />
+    <ClInclude Include="Core\MeshLoader.h" />
+    <ClInclude Include="Core\Asset.h" />
+    <ClInclude Include="Core\GameLoop.h" />
+    <ClInclude Include="Core\Mouse.h" />
+    <ClInclude Include="EditorScript.h" />
+    <ClInclude Include="Core\Input.h" />
+    <ClInclude Include="Core\Key.h" />
+    <ClInclude Include="Core\Profiler.h" />
+    <ClInclude Include="ImGui\ImGuiProfiler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Timer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\D3D11Renderer.cpp">
+      <Filter>DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\LmdImGui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\ImGuiDX11Renderer.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\ImGuiDemo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\ImGuiWin32Platform.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Win32Window.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Core\Logger.cpp" />
+    <ClCompile Include="Core\CubeMesh.cpp" />
+    <ClCompile Include="Core\ID.cpp" />
+    <ClCompile Include="Assimp\AssimpMeshLoader.cpp" />
+    <ClCompile Include="DirectX\Frustum.cpp" />
+    <ClCompile Include="Core\Asset.cpp" />
+    <ClCompile Include="Core\MeshLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KeyBindings.kvl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Negroni.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
+  </ItemGroup>
+</Project>
