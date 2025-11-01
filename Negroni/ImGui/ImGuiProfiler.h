@@ -45,27 +45,30 @@ void ImGui::ImGuiProfiler::Draw()
 
     ImGui::Begin("Profiler", NULL /*&open*/, windowFlags);
     {
-        static float values[100] = {};
+        static float values[60] = {};
+        static float totalElapsed = 0.0f;
         static int values_offset = 0;
         static float maxPlotY = 0.0f;
         static double refresh_time = ImGui::GetTime();
         if (Profiler::size > 1 && ((ImGui::GetTime() - refresh_time) > (1.0f / 60.0f)))
         {
+            totalElapsed = 0.0f;
             for (int i = 0; i < Profiler::size; ++i)
             {
                 auto& entry = Profiler::entries[i];
                 if (entry.indent == 0)
                 {
-                    values[values_offset] += entry.elapsed / 1000.0f;
+                    totalElapsed += entry.elapsed / 1000.0f;
                 }
             }
             values_offset = (values_offset + 1) % IM_ARRAYSIZE(values);
+            values[values_offset] = totalElapsed;
             refresh_time = ImGui::GetTime();
         }
 
-        static str overlayText = "Total elapsed";
+        str overlayText = std::format("Total elapsed ({:.3f} ms)", totalElapsed);
         float max = *std::max_element(values, values + IM_ARRAYSIZE(values));
-        maxPlotY = (max > maxPlotY) || (max < maxPlotY / 2) ? (max * 2) : maxPlotY;
+        maxPlotY = (max * 1.5f > maxPlotY) || (max < maxPlotY / 2) ? (max * 2) : maxPlotY;
 
         const ImVec2 graphSize(ImGui::GetContentRegionAvail().x, 100.0f);
         ImGui::PushStyleColor(ImGuiCol_PlotLines, ImVec4(1.00f, 0.85f, 0.20f, 1.00f));
